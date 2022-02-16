@@ -1,8 +1,28 @@
+
+
+
 import java.util.Scanner;
+
 
 public class Main {
 
+
+
     public static void main(String[] args) {
+
+        System.out.println("hej");
+
+
+        Cart cart = new Cart();
+
+        cart.addBookToCart(new Book(1000, "Boken om grupp3", "Vi i gruppen", 199));
+
+        cart.addNewBooks(new Book(3, 35, "Bilar", "Åke", 300));
+
+        List<Book> books = cart.getBooks();
+
+
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("_______________________________\n\t\t- Menu -");
@@ -15,5 +35,6 @@ public class Main {
         int option = scanner.nextInt();
         scanner.nextLine();
         System.out.println();
+
     }
 }
