@@ -1,6 +1,7 @@
 
 
 
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -10,18 +11,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("hej");
-
-
         Cart cart = new Cart();
 
         cart.addBookToCart(new Book(1000, "Boken om grupp3", "Vi i gruppen", 199));
 
-        cart.addNewBooks(new Book(3, 35, "Bilar", "Åke", 300));
+        cart.addNewBooks(3, 400, "Bilar", "Åke", 500);
 
         List<Book> books = cart.getBooks();
 
+        int x = cart.getNumberOfBooksInCart();
 
+        System.out.println(x);
+
+        for (Book b : books) {
+            b.printBookDetails();
+        }
 
         Scanner scanner = new Scanner(System.in);
 
@@ -36,5 +40,8 @@ public class Main {
         scanner.nextLine();
         System.out.println();
 
+
+
+        }
     }
-}
+
