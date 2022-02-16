@@ -56,4 +56,13 @@ public class Customer {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
+    //Print out details about Customer
+    public void customerInfo() {
+        System.out.println("First name: " +this.firstName);
+        System.out.println("Last name: " + this.lastName);
+        System.out.println("Email: " + this.email);
+        System.out.println("Phone: " + this.phone);
+        System.out.println("");
+    }
 }
