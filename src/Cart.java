@@ -18,10 +18,6 @@ List<Book> cart = new ArrayList<>();
         return carsInStore;
     }
 
-    public void sortCarsByYear() {
-        cars.sort(Comparator.comparing(Car::getYear));
-
-    }
 
     public List<Book> getBooks() {
         return cart;
@@ -32,13 +28,9 @@ List<Book> cart = new ArrayList<>();
         for (int i = 0; i < numberOfBooks; i++)  {
             addBookToCart(new Book(BookId, Title, Author, Price));
         }
-
-
     }
-}
-
-
-
 
 
 }
+
+

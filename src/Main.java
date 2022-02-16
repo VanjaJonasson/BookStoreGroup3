@@ -14,9 +14,18 @@ public class Main {
         Cart cart = new Cart();
 
         cart.addBookToCart(new Book(1000, "Boken om grupp3", "Vi i gruppen", 199));
+
         cart.addBookToCart(new Book(1001, "Bilar", "Åke", 300));
 
+
+        cart.addNewBooks(3, 400, "Bilar", "Åke", 500);
+
+
         List<Book> books = cart.getBooks();
+
+        int x = cart.getNumberOfBooksInCart();
+
+        System.out.println(x);
 
 
         while(true) {
@@ -32,6 +41,10 @@ public class Main {
                 System.out.println("Exiting...");
                 return;
             }
+
+        for (Book b : books) {
+            b.printBookDetails();
+
         }
 
     }
@@ -54,7 +67,11 @@ public class Main {
     }
 
 
+
     static {
         scanner = new Scanner(System.in);
+
+        }
+
     }
-}
+
