@@ -53,4 +53,12 @@ public class Book {
         return "Book id:  \n" + this.bookId + "\nTitle: \n" + this.title + "\nAuthor: " + this.author + "\nPrice: " + this.price;
 
     }
+
+    public void printBookDetails() {
+        System.out.println("BookId: " + this.bookId);
+        System.out.println("Title: " + this.title);
+        System.out.println("Genre: " + this.author);
+        System.out.println("Price: " + this.price);
+        System.out.println("");
+    }
 }
